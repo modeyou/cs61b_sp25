@@ -27,12 +27,11 @@ public class GameLogic {
             if (board[i - 1][c] == 0) {
                 num0++;
             } else {
-                if ((num0 == r - i) && (mergeIdx == 0)) {
-                    if (board[i - 1][c] == board[r][c]) {
+                if ((num0 == r - i) && (board[i - 1][c] == board[r][c])) {
                         num0++;
                         board[r][c] = board[r][c] * 2;
                         mergeIdx = i;
-                    }
+                        break;
                 }
             }
             i--;
